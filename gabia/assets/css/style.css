@@ -3,7 +3,7 @@
 /* layout */
 #wrap {}
 #header {height: 89px; border-bottom: 1px solid #efefef;}
-#banner {height: 550px; background: url(../img/banner-bg.jpg) no-repeat center top; }
+#banner {}
 #sbanner {border-top: 1px solid #efefef;}
 #select {background-color: #1d7abd;}
 #select-1{background-color: #1d7abd;}
@@ -50,6 +50,10 @@
 .banner em {font-size: 18px; color: #f66b05; display: block;}
 .banner .view {font-size: 16px; display: inline-block; margin-top: 50px; border: 1px solid #333; background-color: #fff; padding: 12px 42px; transition: all 0.5s ease;}
 .banner .view:hover {background-color: #000; color: #fff;}
+.banner-img1 {background: url(../img/banner-bg.jpg) no-repeat center top;}
+.banner-img2 {background: url(../img/banner-bg.jpg) no-repeat center top;}
+.banner-img3 {background: url(../img/banner-bg.jpg) no-repeat center top;}
+
 
 
 
