@@ -10,7 +10,10 @@
 #select-2{background-color: #1d7abd;}
 #infor {}
 #ad {background:url(../img/ad.jpg) no-repeat center top; background-size: cover;}
+#ad-1 {background: url(../img/ad_bg1.png) no-repeat;}
 #blog {}
+#six {border-bottom: 1px solid #f3f3f3;}
+#six2 {}
 #site {background-color: #f8f8fa;}
 #footer {height: 300px;}
 
@@ -99,11 +102,11 @@
 .select-2 {overflow: hidden; padding: 70px 0;   }
 .select-2 h3 {float: left; width: 32.333%; margin-right: 1.5%; font-size: 40px; color:#fff; }
 .select-2 > div {float: left; width: 26.3333%; margin-right: 1.5%; margin-bottom: 1.5%; padding: 3%; height: 300px; }
-.select-2 > div.simg-3 {background: #2886ca url(../img/select-1bg.png) no-repeat 30px 30px; background-size: 80px; }
-.select-2 > div.simg-4 {background: #2886ca url(../img/select-1bg.png) no-repeat 30px 30px; background-size: 90px; margin-right: 0%; }
-.select-2 > div.simg-5 {background: #2886ca url(../img/select-1bg.png) no-repeat 30px 30px; background-size: 90px; }
-.select-2 > div.simg-6 {background: #2886ca url(../img/select-1bg.png) no-repeat 30px 30px; background-size: 90px; }
-.select-2 > div.simg-7 {background: #2886ca url(../img/select-1bg.png) no-repeat 30px 30px; background-size: 90px; margin-right: 0%; }
+.select-2 > div.simg-3 {background: #2886ca url(../img/select2-1bg.png) no-repeat 30px 30px; background-size: 80px; }
+.select-2 > div.simg-4 {background: #2886ca url(../img/select2-2bg.png) no-repeat 30px 30px; background-size: 90px; margin-right: 0%; }
+.select-2 > div.simg-5 {background: #2886ca url(../img/select2-3bg.png) no-repeat 30px 30px; background-size: 90px; }
+.select-2 > div.simg-6 {background: #2886ca url(../img/select2-4bg.png) no-repeat 30px 30px; background-size: 90px; }
+.select-2 > div.simg-7 {background: #2886ca url(../img/select2-5bg.png) no-repeat 30px 30px; background-size: 90px; margin-right: 0%; }
 .select-2 > div  h4 {font-size: 18px; color: #fff; padding-bottom: 20px; padding-top: 150px;  }
 .select-2 > div  p {font-size: 15px; color: #fff;  }
 .select-2 > div h4 a {color: #fff;}
@@ -156,6 +159,11 @@
 .ad .view {font-size: 16px; display: inline-block; margin-top: 50px;  border: 1px solid #fff; padding: 12px 42px; transition: all 0.3s ease; color: #fff;}
 .ad .view:hover {background-color: #fff; color: #000;}
 
+/* ad-1 */
+.ad-1 {padding: 70px 0; text-align: center; z-index: 10; position: relative;}
+.ad-1 h3 {font-size: 40px; padding-bottom: 10px; color: #fff;}
+.ad-1 p {font-size: 17px; color: #fff;}
+.ad-1 img {padding-top: 100px;}
 
 
 /* blog */
@@ -181,6 +189,37 @@
 .blog .notice-wrap .nw-right ul {border-top: 2px solid #6f6f6f; padding: 20px; border-bottom: 1px solid #e5e5e5; height: 145px;}
 .blog .notice-wrap .nw-right ul li {padding: 12px 0; font-size: 16px; color: #666;}
 .blog .notice-wrap .nw-right ul li span {background-color: #666; color: #fff; margin-right: 20px; padding:5px 10px;}
+
+/* six */
+.six {text-align: center;}
+.six h3 {font-size: 33px; padding-top: 70px;}
+.six .six-wrap {font-size: 18px; overflow: hidden;}
+.six .six-wrap .six-img {float: left;} 
+.six .six-wrap .six-img img {padding-top: 50px;}
+.six .six-wrap .six-img .six-box {padding: 30px 60px;}
+.six .six-wrap .six-img .six-box p {padding-bottom: 10px; font-size: 20px; }
+.six .six-wrap .six-img .six-box ul {padding-bottom: 20px; color: #6f6f6f;}
+.six2 {text-align: center; }
+.six2 h3 {font-size: 33px; padding-top: 70px;}
+.six2 .six-wrap2 {font-size: 18px; overflow: hidden;}
+.six2 .six-wrap2 .six-img2 {float: left;} 
+.six2 .six-wrap2 .six-img2 img {padding-top: 50px;}
+.six2 .six-wrap2 .six-img2 .six-box2 {padding: 30px 80px;}
+.six2 .six-wrap2 .six-img2 .six-box2 p {padding-bottom: 10px; font-size: 20px; }
+.six2 .six-wrap2 .six-img2 .six-box2 ul {padding-bottom: 20px;  color: #6f6f6f;}
+
+
+/* question */
+.question {overflow: hidden; padding: 100px 0 140px 0;}
+.question h3 {font-size: 35px; border-bottom: 3px solid #000;}
+.question h3 a {font-size: 15px; float: right;}
+.question ul {}
+.question ul li {font-size: 17px; padding: 30px 0; border-bottom: 1px solid #f3f3f3; }
+.question ul li a {padding-left: 20px;}
+.question ul li a span {font-size: 15px; border: 2px solid #1d7abd; content: ''; width: 15px; height: 15px; background-color: #1d7abd; color: #fff; font-size: 16px; border-radius: 50%; text-align: center; padding: 3px 6px;}
+.question ul li a em {padding-left: 20px;}
+
+
 
 
 
