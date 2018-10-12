@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout8</title>
+    <style>
+        /* reset */
+        * {margin: 0; padding: 0;}
+        /* layout */
+        #wrap { }
+        #header {width: 100%; height: 88px; background-color: #e53935;}
+        #banner {width: 100%; height: 900px; background-color: #7b1fa2;}
+        #content1 {width: 100%; height: 285px; background-color: #90caf9;}
+        #content2 {width: 100%; height: 790px; background-color: #5c6bc0;}
+        #content3 {width: 100%; height: 790px; background-color: #81c784;}
+        #footer {width: 100%; height: 65px; background-color: #6d4c41;}
+        #footer3 {width: 100%; height: 163px; background-color: #ff5722;}
+        
+        /* container : 가운데 영역*/
+        .container { width: 1170px; height: inherit; background-color:rgba(255,255,255,0.4); margin: 0 auto;}
+        
+        /* banner */
+        .banner-box1 {width: 100%; height: 600px; background-color: #ea80fc;}
+        .banner-box2 {width: 100%; height: 300px; background-color: #d500f9;}
+        
+        /* content2 */
+        #content2 .container {padding-top: 160px;}
+        .c2-box1 {float: left; width: 50%; height: 290px; background-color: #673ab7;}
+        .c2-box2 {float: left; width: 50%; height: 290px; background-color: #9575cd;}
+        .c2-box3 {float: left; width: 50%; height: 165px; background-color: #4fc3f7;}
+        .c2-box4 {float: left; width: 50%; height: 165px; background-color: #26a69a;}
+        
+        /* content3 */
+        #content3 .container {padding-top: 160px;}
+        .c3-box1 {float: left; width: 234px; height: 468px; background-color: #8bc34a;}
+        .c3-box2 {float: left; width: 234px; height: 234px; background-color: #388e3c;}
+        .c3-box3 {float: left; width: 234px; height: 234px; background-color: #0091ea;}
+        .c3-box4 {float: left; width: 468px; height: 234px; background-color: #00695c;}
+        .c3-box5 {float: left; width: 468px; height: 234px; background-color: #00acc1;}
+        .c3-box6 {float: left; width: 234px; height: 234px; background-color: #ffab40;}
+        .c3-box7 {float: left; width: 234px; height: 234px; background-color: #ff6f00;}
+        
+        /* footer */
+        .footer1 {width: 100%; height: 65px; background-color: #f4511e;}
+        .footer2 {width: 100%; height: 163px; background-color: #ffab91;}
+        
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">header</div>
+        </div>
+        <!-- //header -->
+        <div id="banner">
+            <div class="container">
+                <div class="banner-box1">banner-box1</div>
+                <div class="banner-box2">banner-box2</div>
+            </div>
+        </div>
+        <!-- //banner -->
+        
+        <div id="content1">
+            <div class="container">content1</div>
+        </div>
+        <!-- //content1 -->
+        
+        <div id="content2">
+            <div class="container">
+                <div class="c2-box1">c2-box1</div>
+                <div class="c2-box2">c2-box2</div>
+                <div class="c2-box3">c2-box3</div>
+                <div class="c2-box4">c2-box4</div>
+            </div>
+        </div>
+        <!-- //content2 -->
+        <div id="content3">
+            <div class="container">
+                <div class="c3-box1">box1</div>
+                <div class="c3-box2">box2</div>
+                <div class="c3-box3">box3</div>
+                <div class="c3-box4">box4</div>
+                <div class="c3-box5">box5</div>
+                <div class="c3-box6">box6</div>
+                <div class="c3-box7">box7</div>
+            </div>
+        </div>
+        <!-- //content3 -->
+        <div id="footer">
+            <div class="container">
+                <div class="footer1">footer1</div>
+            </div>
+        </div>
+        <div id="footer3">
+            <div class="container">
+                <div class="footer2">footer2</div>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>    
+</body>
+</html>

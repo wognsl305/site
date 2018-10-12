@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>Animation</title>
+   <style>
+      #box {
+         width: 70px; height: 70px; 
+         background: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); border-radius: 50%;
+         position: absolute; left: 50%; top: 50%;
+         margin-left: -35px; margin-right: -35px;
+      }
+      .btn1 {
+         position: relative; z-index: 1000;
+      }
+   </style>
+</head>
+<body>
+   <button class="btn1">Color</button>
+   <button class="btn2">btn2</button>
+   <button class="btn3">BTN3</button>
+   <button class="btn4">BTN4</button>
+   <button class="btn5">BTN5</button>
+   <button class="btn6">BTN6</button>
+   <button class="btn7">BTN7</button>
+   <button class="btn8">BTN8</button>
+   <button class="btn9">BTN9</button>
+   <button class="btn10">BTN10</button>
+   <button class="btn11">loop</button>
+   <button class="btn12">lp</button>
+   
+   <div id="box"></div>
+   
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+       //btn1을 클릭하면 box의 백그라운드 색을 빨간색으로 변경해주세요!
+      $(".btn1").click(function(){
+         $("#box").css("background","red");
+      });
+      
+      //btn2을 클릭하면 box의 크기를 두배로 변경해주세요!
+      $(".btn2").click(function(){
+         $("#box").css({"width":"140px","height":"140px"});
+      });
+		//btn3을 클릭하면 box의 크기를 2배로 애니메이션 해주세요!
+      $(".btn3").click(function(){
+		  $("#box").animate({"width":"140px","height":"140px"},600);
+	  });
+		//btn4을 클릭하면 box를 사라지게 해주세요!
+		$(".btn4").click(function(){
+//			$("#box").css("display","none");
+//			$("#box").hide();
+			$("#box").fadeOut();
+//			$("#box").slideUp();
+		});
+		//55555555
+		$(".btn5").click(function( ){ 
+           //$("#box").slideToggle( );
+           //$("#box").fadeToggle( );
+           $("#box").toggleClass("on" );
+           if($("#box").hasClass("on")){
+               $("#box").hide();
+           }else{
+               $("#box").show( );
+           }
+        });
+		//btn6을 클릭하면 box 밑으로 이동시켜 주세요! 
+		$(".btn6").click(function(){
+			$("#box").animate({"margin-top":"400px"},200);
+		});
+		//btn7을  변경해주세요!
+		$(".btn7").click(function(){
+			$("#box").animate({"margin-top":"400px"},200);
+			$("#box").animate({"margin-left":"400px"},200);
+			$("#box").animate({"margin-top":"0px"},200);
+			$("#box").animate({"margin-left":"0px"},200);
+		});
+		//btn8
+		$(".btn8").click(function(){
+			$("#box").animate({left:"+=20px"});
+		});
+		//9
+		$(".btn9").click(function(){
+			$("#box").animate({height:"toggle"});
+		});
+		//10
+		$(".btn10").click(function(){
+			$("#box").animate({height:"100px","border-radius":"100%", opacity:"0.4"},"slow");
+			$("#box").animate({width:"100px", "border-radius":"100%",opacity:"0.8"},"slow");
+			$("#box").animate({height:"70px", "border-radius":"50%",opacity:"0.4"},"slow");
+			$("#box").animate({width:"70px", "border-radius":"50%",opacity:"0.8"},"slow");
+		});
+		//11
+		$(".btn11").click(function(){
+         loop();
+    	});
+      
+    	function loop(){
+        $("#box")
+            .css({"width":"200","height":"200"})
+            .animate({marginTop:100},1000)
+            .animate({marginLeft:100},1000,)
+            .animate({marginTop:0},1000)
+            .animate({marginLeft:0},1000,loop);
+		};
+		
+      	$(".btn12").click(function(){
+        	setInterval(time,4000);
+		});
+		
+    	function time(){
+        	$("#box")
+           	.animate({opacity: "0.1"},1200)
+           	.animate({opacity: "1"},1200)
+            .slideUp("slow")
+            .slideDown("fast");
+		};
+		time();
+    </script>
+</body>
+</html>

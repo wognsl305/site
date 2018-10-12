@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>slideToggle</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        a {text-decoration: none;}
+        .accordion-tit {background: #ccc; width: 100%; display: block; padding: 5px; border-top: 1px solid #000;}
+        .accordion-desc {display: none;}
+    </style>
+</head>
+<body>
+   <div>
+       <ul class="accordion">
+           <li><a href="#" class="accordion-tit">title1</a>
+               <div class="accordion-desc">
+                   <p>모스크바 AFP 연합뉴스 E·F조의 생존자인 브라질-멕시코, 스웨덴-스위스가 16강에서 피할 수 없는 대결을 펼친다. 브라질은 28일 모스크바 스파르타크 스타디움에서...</p>
+               </div>
+           </li>
+           <li><a href="#" class="accordion-tit">title2</a>
+               <div class="accordion-desc">
+                   <p>모스크바 AFP 연합뉴스 E·F조의 생존자인 브라질-멕시코, 스웨덴-스위스가 16강에서 피할 수 없는 대결을 펼친다. 브라질은 28일 모스크바 스파르타크 스타디움에서...</p>
+               </div>
+           </li>
+           <li><a href="#" class="accordion-tit">title3</a>
+               <div class="accordion-desc">
+                   <p>모스크바 AFP 연합뉴스 E·F조의 생존자인 브라질-멕시코, 스웨덴-스위스가 16강에서 피할 수 없는 대결을 펼친다. 브라질은 28일 모스크바 스파르타크 스타디움에서...</p>
+               </div>
+           </li>
+       </ul>
+   </div>
+   
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+		$(".accordion-tit").click(function(){
+			$(this).next(".accordion-desc").slideToggle(100);
+		});
+
+    
+    </script>
+</body>
+</html>

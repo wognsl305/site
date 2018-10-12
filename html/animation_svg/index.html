@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="webstoryboy">
+		<meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+		<meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, html5, html4, css3, html, markup, design">
+		<title>SVG</title>
+		<!-- web_font -->
+		<link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+		<!-- css -->
+		<link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+		<link href="../assets/css/custom.css" rel="stylesheet">
+		<link href="../assets/css/style.css" rel="stylesheet">
+		<!-- Prettify -->
+		<link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+		<!-- Icon -->
+		<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+		<link rel="apple-touch-icon" href="../assets/ico/icon_57.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/icon_114.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/icon_72.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/icon_144.png">
+		<!-- hmlt5 support -->
+		<!--[if lt IE 9]><script src="../assets/js/html5shiv.js"></script><![endif]-->
+		<!-- IE6,7 support -->
+		<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+		<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+		<!--[if lte IE 6]>
+		<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+			사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+			<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+			<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a>
+			<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+			<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+			<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+			<![endif]-->
+			<style>
+				.face {
+					display: block;
+					margin: 20px auto;
+					width: 400px;
+				}
+				.face img {
+					width: 400px;
+					border-radius: 50%;
+				}
+				.face1 img {
+					width: 22%;
+					border-radius: 10%;
+					margin: 1%;
+				}
+				.member {
+					margin: 50px 0;
+				}
+				.member li {
+					width: 150px;
+					list-style: none;
+					display: inline-block;
+					margin: 6px;
+				}
+				.member li img {
+					border-radius: 50%;
+				}
+			</style>
+		</head>
+		<body>
+			<!-- nav -->
+			<div id="top-nav" class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container">
+						<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<div class="nav-collapse collapse">
+							<ul class="nav pull-right">
+								<li><a href="#">Leejaehun</a></li>
+								<li><a href="#">reference</a></li>
+								<li><a href="#">tutorial</a></li>
+								<li><a href="#">css</a></li>
+								<li><a href="#">html</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //nav -->
+			<!-- header -->
+			<div id="header">
+				<div class="container">
+					<div class="row">
+						<div class="span12" style="text-align:center;">
+							<div class="header_tit">
+								<h1>Professional web publishers</h1>
+								<h2><a href="http://leehun.dothome.co.kr">leehun.dothome.co.kr</a></h2>
+							</div>
+							<div class="header_icon" id="wow">
+								<ul>
+									<li class="icon_tit1"><a href="#" title=""><span class="blind">leehun.dothome.co.kr 사이트</span></a></li>
+									<li class="icon_tit2"><a href="#" title=""><span class="blind">leehun 사이트</span></a></li>
+									<li class="icon_tit3"><a href="#" title=""><span class="blind">leehun 사이트</span></a></li>
+									<li class="icon_tit4"><a href="#" title=""><span class="blind">leehun 사이트</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //header -->
+			<!-- contents -->
+			<div class="container" style="margin-top:20px;">
+				<div class="row-fluid">
+					<div class="span12">
+						<h1>SVG</h1>
+						<div class="lead">SVG(Scalable Vector Graphic)는 2차원 벡터 그래픽을 표현하기 위한 XML 기반의 파일 형식으로, 1999년 W3C의 주도하에 개발된 오픈 표준의 벡터 그래픽 파일 형식입니다.</div>
+						<style>
+							.block1 {width: 200px; height: 200px; margin: 40px; float: left;}
+							.block1 > svg {width: 200px; height: 200px; background: #ffebee;}
+						</style>
+
+						<h2>Rect</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg>
+									<rect width="140" height="140" fill="#f48fb1" x="30" y="30" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<rect width="140" height="140" fill="#f48fb1" x="30" y="30" stroke-width="5" stroke="#880e4f" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<rect width="140" height="140" fill="#f48fb1" x="30" y="30" stroke-width="10" stroke="#880e4f" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<rect width="140" height="140" fill="#f48fb1" x="30" y="30" stroke-width="15" stroke="#880e4f" />
+								</svg>
+							</div>
+						</div>
+						
+						<h2>Rect : border-radius</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg>
+									<rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="5" ry="5" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="20" ry="20" stroke-width="5" stroke="#880e4f" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="40" ry="40" stroke-width="5" stroke="#880e4f" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="70" ry="70" stroke-width="5" stroke="#880e4f" />
+								</svg>
+							</div>
+						</div>
+						
+						<h2>Circle</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg>
+									<circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="0" fill="#f48fb1" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="5" fill="#f48fb1" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="10" fill="#f48fb1" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="15" fill="#f48fb1" />
+								</svg>
+							</div>
+						</div>
+
+						<h2>ellipse</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg>
+									<ellipse cx="100" cy="100" rx="90" ry="90" stroke="#880e4f" stroke-width="0" fill="#f48fb1" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<ellipse cx="100" cy="100" rx="90" ry="70" stroke="#880e4f" stroke-width="0" fill="#f48fb1" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<ellipse cx="100" cy="100" rx="90" ry="50" stroke="#880e4f" stroke-width="0" fill="#f48fb1" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<ellipse cx="100" cy="100" rx="90" ry="30" stroke="#880e4f" stroke-width="0" fill="#f48fb1" />
+								</svg>
+							</div>
+						</div>
+						
+						<h2>polygon</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg>
+									<polygon fill="#27AAE1" stroke="#000000" stroke-miterlimit="10" points="159.471,194.027 4.32,86.647 174.89,5.972 "/>
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<polygon fill="#27AAE1" stroke="#000000" stroke-miterlimit="10" points="3.063,144.465 23.605,24.4 142.059,4.731 194.724,112.641 108.818,199 "/>
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<polygon fill="#27AAE1" stroke="#000000" stroke-miterlimit="10" points="132.71,185.046 42.704,170.853 9.992,85.806 67.289,14.954 157.297,29.149 190.008,114.194 "/>
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<polygon fill="#27AAE1" stroke="#000000" stroke-miterlimit="10" points="156.394,178.511 85.082,195.691 22.51,157.414 5.33,86.103 43.605,23.531 114.918,6.351 177.49,44.627 194.67,115.938 "/>
+								</svg>
+							</div>
+
+							<div class="block1">
+								<svg>
+									<polygon fill="#27AAE1" stroke="#000000" stroke-width="1" stroke-miterlimit="10" points="176.009,169.031 113.181,151.839 63.4,193.848 60.336,128.782 5,94.42 65.934,71.399 81.515,8.152 122.238,58.99 187.205,54.265 151.439,108.705 "/>
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<polygon fill="#27AAE1" stroke="#000000" stroke-width="1" stroke-miterlimit="10" points="184.15,145.8 131.79,137.147 136.287,190.026 101.738,149.742 71.193,193.14 70.622,140.073 19.327,153.684 53,112.665 4.958,90.119 57.119,80.342 34.808,32.189 81.05,58.229 94.911,7 113.598,56.672 157.144,26.338 139.53,76.4 192.388,81.154 146.715,108.183 "/>
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<polygon fill="#27AAE1" stroke="#000000" stroke-width="1" stroke-miterlimit="10" points="176.472,155.063 130.852,135.832 145.27,183.193 112.512,146.072 104.953,195 91.544,147.342 63.505,188.145 72.104,139.389 29.137,163.985 58.038,123.788 8.655,127.307 52.135,103.629 6.115,85.372 55.563,82.905 22.021,46.489 67.642,65.721 53.224,18.358 85.982,55.48 93.541,6.552 106.948,54.21 134.988,13.407 126.391,62.164 169.356,37.567 140.456,77.765 189.839,74.247 146.359,97.924 192.379,116.181 142.931,118.647 "/>
+								</svg>
+							</div>
+							<div class="block1">
+								<svg>
+									<polygon fill="#27AAE1" stroke="#000000" stroke-miterlimit="10" points="177.356,149.078 135.6,128.063 166.999,162.694 129.815,134.364 154.316,174.176 122.971,139.494 139.739,183.131 115.3,143.281 123.767,189.256 107.065,145.593 106.938,192.341 98.545,146.354 89.831,192.281 90.03,145.534 73.025,189.079 81.811,143.164 57.094,182.844 74.167,139.325 42.58,173.786 67.359,134.146 29.977,162.218 61.618,127.806 19.715,148.529 57.14,120.517 12.143,133.188 54.078,112.529 7.519,116.718 52.536,104.116 6,99.678 52.565,95.563 7.637,82.647 54.166,87.16 12.376,66.21 57.284,79.194 20.055,50.922 61.813,71.937 30.413,37.306 67.597,65.636 43.095,25.824 74.441,60.504 57.672,16.869 82.112,56.718 73.646,10.744 90.347,54.406 90.473,7.659 98.866,53.646 107.581,7.719 107.382,54.466 124.387,10.921 115.602,56.835 140.317,17.157 123.245,60.674 154.832,26.213 130.054,65.853 167.435,37.782 135.793,72.194 177.697,51.471 140.271,79.483 185.269,66.811 143.334,87.47 189.894,83.282 144.877,95.884 191.412,100.322 144.847,104.438 189.775,117.353 143.246,112.841 185.036,133.79 140.128,120.805 "/>
+								</svg>
+							</div>
+						</div>
+						
+
+						<h2>Line</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg style="background: #ffecb3  ">
+									<line x1="0" y1="0" x2="200" y2="200" stroke="#ff0000" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background: #ffecb3  ">
+									<line x1="50" y1="50" x2="200" y2="200" stroke="#ff0000" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background: #ffecb3  ">
+									<line x1="100" y1="100" x2="200" y2="200" stroke="#ff0000" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background: #ffecb3  ">
+									<line x1="150" y1="150" x2="200" y2="200" stroke="#ff0000" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+						</div>
+
+						<h2>PolyLine</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg style="background: #ffecb3  ">
+									<polyline points="18,16 18,181 "  stroke="#ff0000" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background: #ffecb3  ">
+									<polyline points="18,16 18,181 181,35 "  stroke="#ff0000" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background: #ffecb3  ">
+									<polyline points="18,16 18,181 181,35 46.5,60.5"  stroke="#ff0000" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background: #ffecb3  ">
+									<polyline points="18,16 18,181 181,35 46.5,60.5 167.5,180.5 "  stroke="#ff0000" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+						</div>
+
+						<h2>Path</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg style="background: #ffecb3">
+									<path d="M10.5,12.5c0,97.3,78.3,176,175,176"  stroke="#ff0000" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background: #ffecb3">
+									<path d="M194.5,141.5c-35.9,48.6-104.4,58.9-153,23C2.6,135.8-5.6,81,23.1,42.1C46.1,11,89.9,4.4,121,27.4c24.9,18.4,30.2,53.5,11.8,78.3c-14.7,19.9-42.8,24.1-62.7,9.4C54.2,103.4,50.8,80.9,62.6,65C72,52.3,90,49.6,102.7,59c10.2,7.5,12.4,21.9,4.8,32.1c-6,8.2-17.5,9.9-25.7,3.9c-6.5-4.8-7.9-14-3.1-20.5"  stroke="#ff0000" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background: #ffecb3">
+									<path fill="none" stroke="#ED1C24" stroke-miterlimit="10" d="M90.582,113.561C28.751,220.652-40.33,101,83.33,101c-123.659,0-54.578-119.652,7.252-12.56c-61.83-107.092,76.332-107.092,14.503,0C166.913-18.652,235.996,101,112.336,101c123.66,0,54.577,119.652-7.251,12.561C166.913,220.652,28.751,220.652,90.582,113.561z"  stroke="#ff0000" stroke-width="2" fill="none"/>
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background: #ffecb3">
+									<path fill="none" stroke="#ED1C24" stroke-miterlimit="10" d="M161.339,162.921C79.525,91.122,96.015,82.997,103.1,191.616c-7.084-108.619,10.322-102.704-61.474-20.893c71.796-81.811,79.922-65.321-28.697-58.235c108.619-7.086,102.704,10.321,20.89-61.476c81.814,71.797,65.323,79.923,58.238-28.697c7.085,108.62-10.321,102.705,61.473,20.89c-71.794,81.815-79.92,65.325,28.698,58.237C73.61,108.53,79.525,91.122,161.339,162.921z"  stroke="#ff0000" stroke-width="2" fill="none"/>
+								</svg>
+							</div>
+							<div class="block1">
+			                  <svg width="200" height="200" style="background:#ffecb3">
+			                      <path d="M43.111,22.734c1.882,2.159-8.673,11.357-6.791,13.517c1.882,2.159,12.436-7.039,14.318-4.88c1.882,2.16-8.672,11.358-6.789,13.518c1.884,2.162,12.438-7.036,14.322-4.875 c1.883,2.16-8.672,11.358-6.789,13.518c1.882,2.16,12.437-7.038,14.319-4.879c1.883,2.161-8.671,11.359-6.788,13.519 c1.884,2.161,12.438-7.037,14.322-4.875c1.883,2.16-8.672,11.358-6.789,13.519c1.883,2.161,12.437-7.037,14.321-4.877 c1.884,2.162-8.671,11.36-6.787,13.521c1.883,2.161,12.437-7.037,14.32-4.877c1.884,2.162-8.671,11.36-6.787,13.521 c1.883,2.161,12.438-7.037,14.321-4.876c1.884,2.161-8.671,11.36-6.787,13.521c1.884,2.161,12.438-7.037,14.322-4.875c1.884,2.162-8.67,11.36-6.786,13.522c1.884,2.161,12.438-7.037,14.322-4.875c1.884,2.162-8.67,11.36-6.786,13.522 c1.884,2.162,12.439-7.036,14.323-4.873c1.883,2.161-8.671,11.359-6.787,13.521c1.882,2.16,12.437-7.038,14.319-4.878c1.884,2.162-8.67,11.36-6.786,13.522c1.883,2.161,12.437-7.037,14.321-4.877c1.884,2.162-8.67,11.36-6.786,13.522 c1.885,2.163,12.439-7.035,14.324-4.873s-8.67,11.361-6.785,13.524c1.885,2.163,12.439-7.035,14.324-4.873c1.884,2.162-8.67,11.36-6.786,13.522c1.885,2.162,12.439-7.036,14.324-4.873c1.886,2.164-8.668,11.362-6.782,13.527 c1.887,2.166,12.442-7.032,14.329-4.866c1.887,2.166-8.667,11.364-6.779,13.53" stroke-width="2" fill="none" stroke="#ff0000" />
+			                  </svg>
+			              </div>
+			              <div class="block1">
+								<svg width="200" height="200" style="background:#ffecb3">
+	                      <path d="M162.771,162.841c-69.414-66.75-69.414-66.75-56.957-18.392 c-12.457-48.358-12.457-48.358-47.441,36.493c34.984-84.851,34.984-84.851-0.109-59.853C93.357,96.091,93.357,96.091,8.898,87.247 c84.459,8.844,84.459,8.844,56.89-18.599c27.57,27.443,27.57,27.443,16.93-57.408c10.639,84.851,10.639,84.851,35.268,48.358 c-24.629,36.493-24.629,36.493,59.83-1.638c-84.459,38.131-84.459,38.131-35.093,48.486 C93.357,96.091,93.357,96.091,162.771,162.841z" stroke-width="2" fill="none" stroke="#ff0000" />
+							</div>
+							<div class="block1">
+								<svg width="200" height="200" style="background:#ffecb3">
+			                      <path fill="none" stroke="#ED1C24" stroke-miterlimit="10" d="M159.322,176.091c-25,0-50-9-69-27c-13,10-18,29-15,45
+		c-15-20-22-46-19-71c-17-4-34,4-46,17c7-24,23-47,45-59c-9-15-27-23-44-24c5-1,9-3,13-5c21-5,42-5,62,2c6-16,0-35-11-48
+		c23,11,42,31,52,55c16-7,25-23,30-39c4,22,5,44-4,65c-2,4-4,7-5,11c15,8,32,6,47,0c-15,20-38,36-64,39c1,4,2,8,3,12c1,2,2,5,3,7
+		C142.322,165.091,151.322,171.091,159.322,176.091L159.322,176.091z"  stroke="#ff0000" stroke-width="2" fill="none"/>
+			                  </svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="200" style="background:#ffecb3">
+			                      <path d="M189.477,132.044c-4.507,6.655-18.649,4.617-24.446,9.645c-5.998,5.202-6.043,19.446-13.025,22.828c-7.083,3.431-18.318-5.386-25.995-3.909c-7.677,1.478-14.836,13.836-22.686,13.28c-7.739-0.548-13.068-13.757-20.569-16.36c-7.249-2.516-19.623,4.627-26.279,0.121c-5.324-3.605-2.114-16.699-6.136-21.336c-4.161-4.798-17.543-3.525-20.249-9.111c-2.745-5.666,6.568-15.404,5.385-21.546c-1.182-6.142-13.444-11.727-12.999-18.007c0.438-6.191,13.337-9.976,15.419-15.977c2.013-5.799-5.829-16.765-2.224-22.089c2.884-4.259,15.139-0.112,18.849-3.33c3.839-3.329,1.51-16.021,5.979-18.185c4.533-2.196,13.073,7.512,17.987,6.567c4.913-0.946,9.239-13.131,14.263-12.775c4.953,0.351,7.503,13,12.303,14.666c4.639,1.61,14.478-6.791,18.738-3.907c3.408,2.307-1.49,13.891,1.084,16.859c2.663,3.071,14.803-0.101,16.535,3.474c1.757,3.626-8.268,11.209-7.512,15.139c0.757,3.931,12.88,7.249,12.595,11.269c-0.281,3.962-12.731,5.524-14.063,9.364c-1.288,3.712,7.56,12.649,5.252,16.056c-1.846,2.726-12.893-2.771-15.267-0.712c-2.457,2.131,1.39,13.829-1.47,15.215c-2.901,1.405-9.717-8.873-12.861-8.268c-3.145,0.605-5.657,12.679-8.873,12.452c-3.17-0.224-3.941-12.515-7.013-13.581c-2.969-1.03-11.185,8.175-13.911,6.329c-2.181-1.477,3.796-12.094,2.149-13.993c-1.704-1.965-13.05,2.421-14.158,0.133c-1.124-2.321,9.357-8.523,8.873-11.039c-0.484-2.516-12.519-4.384-12.337-6.956c0.18-2.536,12.343-2.675,13.196-5.132c0.824-2.375-8.667-10.015-7.191-12.195c1.181-1.745,11.455,4.616,12.975,3.298c1.572-1.364-3.246-12.427-1.416-13.313c1.857-0.899,7.568,9.744,9.581,9.356c2.012-0.387,3.365-12.39,5.423-12.245c2.029,0.144,1.662,12.205,3.628,12.887c1.9,0.659,9.078-9.061,10.823-7.88c1.396,0.945-5.272,10.944-4.218,12.16c1.091,1.258,11.928-3.906,12.637-2.442c0.719,1.485-10.053,6.805-9.744,8.415c0.31,1.61,12.288,2.55,12.171,4.196c-0.115,1.623-12.095,0.851-12.64,2.424c-0.528,1.52,9.376,8.329,8.431,9.724c-0.756,1.117-10.535-5.797-11.508-4.954c-1.006,0.873,4.434,11.529,3.263,12.096c-1.188,0.576-6.194-10.301-7.482-10.053c-1.288,0.248-1.898,12.205-3.215,12.112c-1.298-0.092-0.203-12.006-1.461-12.443c-1.216-0.422-7.729,9.628-8.846,8.872c-0.893-0.605,6.217-10.208,5.543-10.986c-0.698-0.805-11.21,4.857-11.664,3.919c-0.46-0.951,10.499-5.705,10.301-6.735c-0.198-1.03-12.14-1.376-12.065-2.43c0.074-1.039,11.936,0.316,12.285-0.691c0.338-0.973-9.83-7.25-9.225-8.143" stroke-width="2" fill="none" stroke="#ff0000" />
+			                  </svg>
+							</div>
+						</div>
+						
+						<h2>stroke-linecap / stroke-dasharry</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg style="background:#ffecb3">
+									<path stroke="#e65100" stroke-width="1" fill="none" d="M30 30 l140 00" />
+									<path stroke="#e65100" stroke-width="2" fill="none" d="M30 50 l140 00" />
+									<path stroke="#e65100" stroke-width="3" fill="none" d="M30 70 l140 00" />
+									<path stroke="#e65100" stroke-width="4" fill="none" d="M30 90 l140 00" />
+									<path stroke="#e65100" stroke-width="5" fill="none" d="M30 110 l140 00" />
+									<path stroke="#e65100" stroke-width="6" fill="none" d="M30 130 l140 00" />
+									<path stroke="#e65100" stroke-width="7" fill="none" d="M30 150 l140 00" />
+									<path stroke="#e65100" stroke-width="8" fill="none" d="M30 170 l140 00" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background:#ffecb3">
+									<path stroke="#e65100" stroke-linecap="round" stroke-width="1" fill="none" d="M30 30 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-width="2" fill="none" d="M30 50 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-width="3" fill="none" d="M30 70 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-width="4" fill="none" d="M30 90 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-width="5" fill="none" d="M30 110 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-width="6" fill="none" d="M30 130 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-width="7" fill="none" d="M30 150 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-width="8" fill="none" d="M30 170 l140 00" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background:#ffecb3">
+									<path stroke="#e65100" stroke-linecap="butt" stroke-width="1" fill="none" d="M30 30 l140 00" />
+									<path stroke="#e65100" stroke-linecap="square" stroke-width="2" fill="none" d="M30 50 l140 00" />
+									<path stroke="#e65100" stroke-linecap="butt" stroke-width="3" fill="none" d="M30 70 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-width="4" fill="none" d="M30 90 l140 00" />
+									<path stroke="#e65100" stroke-linecap="butt" stroke-width="5" fill="none" d="M30 110 l140 00" />
+									<path stroke="#e65100" stroke-linecap="square" stroke-width="6" fill="none" d="M30 130 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-width="7" fill="none" d="M30 150 l140 00" />
+									<path stroke="#e65100" stroke-linecap="butt" stroke-width="8" fill="none" d="M30 170 l140 00" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background:#ffecb3">
+									<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="1" fill="none" d="M30 30 l140 00" />
+									<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="2" fill="none" d="M30 50 l140 00" />
+									<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="3" fill="none" d="M30 70 l140 00" />
+									<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="4" fill="none" d="M30 90 l140 00" />
+									<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="5" fill="none" d="M30 110 l140 00" />
+									<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="6" fill="none" d="M30 130 l140 00" />
+									<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="7" fill="none" d="M30 150 l140 00" />
+									<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="8" fill="none" d="M30 170 l140 00" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background:#ffecb3">
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="1" fill="none" d="M30 30 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="2" fill="none" d="M30 50 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="3" fill="none" d="M30 70 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="4" fill="none" d="M30 90 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="5" fill="none" d="M30 110 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="6" fill="none" d="M30 130 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="7" fill="none" d="M30 150 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="8" fill="none" d="M30 170 l140 00" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background:#ffecb3">
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="1" fill="none" d="M30 30 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="2" fill="none" d="M30 50 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="3" fill="none" d="M30 70 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="4" fill="none" d="M30 90 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="5" fill="none" d="M30 110 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="6" fill="none" d="M30 130 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="7" fill="none" d="M30 150 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="8" fill="none" d="M30 170 l140 00" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background:#ffecb3">
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="1" fill="none" d="M30 30 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="2" fill="none" d="M30 50 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="3" fill="none" d="M30 70 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="4" fill="none" d="M30 90 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="5" fill="none" d="M30 110 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="6" fill="none" d="M30 130 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="7" fill="none" d="M30 150 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="8" fill="none" d="M30 170 l140 00" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg style="background:#ffecb3">
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="1" fill="none" d="M30 30 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="2" fill="none" d="M30 50 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="3" fill="none" d="M30 70 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="4" fill="none" d="M30 90 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="5" fill="none" d="M30 110 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="6" fill="none" d="M30 130 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="7" fill="none" d="M30 150 l140 00" />
+									<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="8" fill="none" d="M30 170 l140 00" />
+								</svg>
+							</div>
+						</div>
+
+						<br>
+						<h2>Linear Gradient</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg width="200" height="20" style="background: #fff3e0">
+									<linearGradient id="linearGradient1" gradientUits="userSpaceInUse">
+										<stop offset="0" style="stop-color: #a18cd1" />
+										<stop offset="1" style="stop-color: #fbc2eb" />
+									</linearGradient>
+									<circle cx="100" cy="100" r="80" fill="url(#linearGradient1)" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="20" style="background: #fff3e0">
+									
+									<rect x="30" y="30" width="140" height="140" fill="url(#linearGradient1)" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="20" style="background: #fff3e0">
+									
+									<polygon fill="url(#linearGradient1)" stroke-miterlimit="10" points="159.471,194.027 4.32,86.647 174.89,5.972 "/>
+								</svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="20" style="background: #fff3e0">
+									
+									<polygon points="182,148.3 114.7,131.7 78.2,190.6 73.2,121.5 5.9,104.9 70.1,78.8 65.1,9.7 109.7,62.6 173.9,36.5 137.3,95.4 " stroke-width="0" fill="url(#linearGradient1)"/>
+								</svg>
+							</div>
+						</div>
+							
+						<br>
+						<h2>Radial Gradient</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg width="200" height="20" style="background: #fff3e0">
+									<radialGradient id="radialGradient1" gradientUits="userSpaceInUse">
+										<stop offset="0" style="stop-color: #a18cd1" />
+										<stop offset="1" style="stop-color: #fbc2eb" />
+									</radialGradient>
+									<circle cx="100" cy="100" r="80" fill="url(#radialGradient1)" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="20" style="background: #fff3e0">
+									<rect x="30" y="30" width="140" height="140" fill="url(#radialGradient1)" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="20" style="background: #fff3e0">
+									<polygon points="170.9,180.5 7.6,125.8 136.6,11.7" stroke-width="0" fill="url(#radialGradient1)"/>
+								</svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="20" style="background: #fff3e0">
+									<polygon points="182,148.3 114.7,131.7 78.2,190.6 73.2,121.5 5.9,104.9 70.1,78.8 65.1,9.7 109.7,62.6 173.9,36.5 137.3,95.4 " stroke-width="0" fill="url(#radialGradient1)"/>
+								</svg>
+							</div>
+						</div>
+
+						<br>
+						<h2>Clip-path</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg width="200" height="200">
+									<image xlink:href="svg.jpg" width="200" height="200" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="200">
+									<image xlink:href="svg.jpg" width="200" height="200" clip-path="circle(100px at center)" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="200">
+									<clipPath id="clippath1">
+										<polygon points="170.9,180.5 7.6,125.8 136.6,11.7"/>
+									</clipPath>
+									<image xlink:href="svg.jpg" width="200" height="200" clip-path="url(#clippath1)" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="200">
+									<clipPath id="clippath2">
+										<polygon points="182,148.3 114.7,131.7 78.2,190.6 73.2,121.5 5.9,104.9 70.1,78.8 65.1,9.7 109.7,62.6 173.9,36.5 137.3,95.4"/>
+									</clipPath>
+									<image xlink:href="svg.jpg" width="200" height="200" clip-path="url(#clippath2)" />
+								</svg>
+							</div>
+						</div>
+						<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+						<style>
+							.text-clip {
+								width: 200px; height: 200px; line-height: 200px;
+								text-align: center; 
+								font-size: 43px;
+								font-family: 'Black Han Sans', sans-serif;
+								background: url(a1.jpg);
+								background-size: cover;
+								-webkit-text-fill-color: transparent;
+								-webkit-background-clip: text;
+							}
+						</style>
+						<br>
+						<h2>Text Clip-path</h2>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg width="200" height="200" style="font-family: 'Black Han Sans', sans-serif;">
+									<text x="28" y="120" font-size="45">Hun'S</text>
+								</svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="200" style="font-family: 'Black Han Sans', sans-serif;">
+									<a xlink:href="http://webstoryboy.co.kr">
+										<text x="28" y="120" font-size="45">Hun'S</text>
+									</a>
+								</svg>
+							</div>
+							<div class="block1" style="background: #ffebee">
+								<div class="text-clip">
+									Hun'S
+								</div>
+							</div>
+							<div class="block1">
+								<svg width="200" height="200" style="font-family: 'Black Han Sans', sans-serif;">
+									<pattern id="pattern" patternUnits="userSpaceInUse" width="200" height="200">
+										<image xlink:href="a1.jpg" width="200" height="200" />
+									</pattern>
+									<text x="28" y="120" font-size="45" fill="url(#pattern)">Hun'S</text>
+								</svg>
+							</div>
+						</div>
+						
+							
+						<style>
+							.rect1 {  }
+							.rect1 > svg {background: #ffebee;}
+							.rect1 > svg rect {x:30px; y:30px; width: 140px; height: 140px;  stroke:#880e41; stroke-width:5; fill: none; animation: rect1 4s infinite linear;}
+							.rect2 > svg rect {x:30px; y:30px; width: 140px; height: 140px;  stroke:#880e41; stroke-width:5; fill: none; animation: rect2 4s infinite linear; stroke-dashoffset:100; stroke-dasharray:100; }
+							.rect3 > svg rect {x:30px; y:30px; width: 140px; height: 140px;  stroke:#880e41; stroke-width:5; fill: none; animation: rect3 4s infinite linear; stroke-dashoffset:300; stroke-dasharray:300;}
+							.rect4 > svg rect {x:30px; y:30px; width: 140px; height: 140px;  stroke:#880e41; stroke-width:5; fill: none; animation: rect4 4s infinite linear; stroke-dashoffset:560; stroke-dasharray:560;}
+							@keyframes rect1 {
+								0%     {stroke:#880e41;  stroke-width:5; }
+								35%   {stroke:#1b5e20;  stroke-width:5; }
+								70%   {stroke:#e65100;  stroke-width:5; }
+								100% {stroke:#880e41;  stroke-width:5; }
+							}
+							@keyframes rect2 {
+								0%     {stroke:#880e41; stroke-dashoffset:100;  }
+								35%   {stroke:#1b5e20;   }
+								70%   {stroke:#e65100;   }
+								100% {stroke:#880e41;  stroke-dashoffset:0; }
+							}
+							@keyframes rect3 {
+								0%     {stroke:#880e41; stroke-dashoffset:300;  }
+								35%   {stroke:#1b5e20;   }
+								70%   {stroke:#e65100;   }
+								100% {stroke:#880e41;  stroke-dashoffset:0; }
+							}
+							@keyframes rect4 {
+								0%     {stroke:#880e41; stroke-dashoffset:560; }
+								35%   {stroke:#1b5e20;   }
+								70%   {stroke:#e65100;   }
+								100% {stroke:#880e41;  stroke-dashoffset:0;}
+							}
+						</style>
+						<br>
+						<h2>Animation</h2>
+						<div class="well clearfix">
+							<div class="block1 rect1">
+								<svg><rect /></svg>
+							</div>
+							<div class="block1 rect2">
+								<svg><rect /></svg>
+							</div>
+							<div class="block1 rect3">
+								<svg><rect /></svg>
+							</div>
+							<div class="block1 rect4">
+								<svg><rect /></svg>
+							</div>
+						</div>
+							
+						<style>
+							.path1 {animation: path1 1s infinite linear; stroke-dasharray: 250px; stroke-dashoffset:267px; }
+							.path2 {animation: path2 1s infinite linear; stroke-dasharray: 692px; stroke-dashoffset:692px; }
+							.path3 {animation: path3 1s infinite linear; stroke-dasharray: 1074px; stroke-dashoffset:1074px; }
+							.path4 {animation: path4 1s infinite linear; stroke-dasharray: 2125px; stroke-dashoffset:2125px; }
+							.path5 {animation: path5 1s infinite linear; stroke-dasharray: 520px; stroke-dashoffset:520px; }
+							.path6 {animation: path6 1s infinite linear; stroke-dasharray: 1096px; stroke-dashoffset:1096px; }
+							.path7 {animation: path7 1s infinite linear; stroke-dasharray: 947px; stroke-dashoffset:947px; }
+							.path8 {animation: path8 1s infinite linear; stroke-dasharray: 1015px; stroke-dashoffset:1015px; }
+							@keyframes path1{
+								0% {stroke-dashoffset :267px;}
+								100% {stroke-dashoffset :0px;}
+							}
+							@keyframes path2{
+								0% {stroke-dashoffset :692px;}
+								100% {stroke-dashoffset :0px;}
+							}
+							@keyframes path3{
+								0% {stroke-dashoffset :1074px;}
+								100% {stroke-dashoffset :0px;}
+							}
+							@keyframes path4{
+								0% {stroke-dashoffset :2125px;}
+								100% {stroke-dashoffset :0px;}
+							}
+							@keyframes path5{
+								0% {stroke-dashoffset :520px;}
+								100% {stroke-dashoffset :0px;}
+							}
+							@keyframes path6{
+								0% {stroke-dashoffset :1096px;}
+								100% {stroke-dashoffset :0px;}
+							}
+							@keyframes path7{
+								0% {stroke-dashoffset :947px;}
+								100% {stroke-dashoffset :0px;}
+							}
+							@keyframes path8{
+								0% {stroke-dashoffset :1015px;}
+								100% {stroke-dashoffset :0px;}
+							}
+						</style>
+						<div class="well clearfix">
+							<div class="block1">
+								<svg width="200" height="200" style="background:#e3f2fd">
+									 <path class="path1" d="M19.092,14.703c0,95.418,75.1,172.63,167.908,172.63" stroke="#0d47a1" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+							<div class="block1">
+								<svg width="200" height="200" style="background:#e3f2fd">
+									 	<path class="path2" d="M188.876,141.665c-35.899,41.053-98.28,45.232-139.333,9.333
+			C16.7,122.279,13.358,72.374,42.076,39.531c22.975-26.274,62.899-28.948,89.173-5.973c21.019,18.38,23.159,50.319,4.779,71.339
+			c-14.704,16.815-40.256,18.527-57.071,3.823c-13.452-11.763-14.822-32.204-3.058-45.657c9.411-10.762,25.764-11.857,36.525-2.447
+			c8.609,7.528,9.486,20.611,1.957,29.22c-6.023,6.888-16.489,7.589-23.376,1.566c-5.51-4.818-6.071-13.191-1.253-18.701" stroke="#0d47a1" stroke-width="2" fill="none" />
+								</svg>
+							</div>
+							<div class="block1">
+			                  <svg width="200" height="200" style="background:#e3f2fd">
+			                      <path class="path3" d="M93.926,111.318c-57.253,99.165-122.58-13.985-8.074-13.985
+			c-114.506,0-49.179-113.15,8.074-13.985c-57.253-99.165,73.401-99.165,16.148,0c57.253-99.165,122.58,13.985,8.074,13.985
+			c114.506,0,49.179,113.15-8.074,13.985C167.327,210.484,36.673,210.484,93.926,111.318z" stroke="#0d47a1" stroke-width="2" fill="none" />
+			                  </svg>
+			              </div>
+			              <div class="block1">
+			                  <svg width="200" height="200" style="background:#e3f2fd">
+			                      <path class="path4" d="M169.153,152.865c-93.982-70.487-82.024-79.874-35.876,28.161
+			c-46.148-108.035-31.098-110.185-45.15,6.45c14.052-116.634,28.161-110.971-42.326-16.989
+			c70.487-93.982,79.874-82.024-28.161-35.876c108.035-46.148,110.185-31.098-6.45-45.15
+			c116.634,14.052,110.971,28.161,16.989-42.326c93.982,70.487,82.024,79.874,35.876-28.161
+			c46.148,108.035,31.098,110.185,45.15-6.45c-14.052,116.634-28.161,110.971,42.326,16.989
+			c-70.487,93.982-79.874,82.024,28.161,35.876c-108.035,46.148-110.185,31.098,6.45,45.15
+			C69.508,96.487,75.171,82.378,169.153,152.865z" stroke="#0d47a1" stroke-width="2" fill="none" />
+			                  </svg>
+			              </div>
+			              <div class="block1">
+			                  <svg width="200" height="200" style="background:#e3f2fd">
+			                      <path class="path5" d="M43.111,22.734c1.882,2.159-8.673,11.357-6.791,13.517
+			c1.882,2.159,12.436-7.039,14.318-4.88c1.882,2.16-8.672,11.358-6.789,13.518c1.884,2.162,12.438-7.036,14.322-4.875 c1.883,2.16-8.672,11.358-6.789,13.518c1.882,2.16,12.437-7.038,14.319-4.879c1.883,2.161-8.671,11.359-6.788,13.519 c1.884,2.161,12.438-7.037,14.322-4.875c1.883,2.16-8.672,11.358-6.789,13.519c1.883,2.161,12.437-7.037,14.321-4.877 c1.884,2.162-8.671,11.36-6.787,13.521c1.883,2.161,12.437-7.037,14.32-4.877c1.884,2.162-8.671,11.36-6.787,13.521 c1.883,2.161,12.438-7.037,14.321-4.876c1.884,2.161-8.671,11.36-6.787,13.521c1.884,2.161,12.438-7.037,14.322-4.875
+			c1.884,2.162-8.67,11.36-6.786,13.522c1.884,2.161,12.438-7.037,14.322-4.875c1.884,2.162-8.67,11.36-6.786,13.522 c1.884,2.162,12.439-7.036,14.323-4.873c1.883,2.161-8.671,11.359-6.787,13.521c1.882,2.16,12.437-7.038,14.319-4.878
+			c1.884,2.162-8.67,11.36-6.786,13.522c1.883,2.161,12.437-7.037,14.321-4.877c1.884,2.162-8.67,11.36-6.786,13.522 c1.885,2.163,12.439-7.035,14.324-4.873s-8.67,11.361-6.785,13.524c1.885,2.163,12.439-7.035,14.324-4.873
+			c1.884,2.162-8.67,11.36-6.786,13.522c1.885,2.162,12.439-7.036,14.324-4.873c1.886,2.164-8.668,11.362-6.782,13.527 c1.887,2.166,12.442-7.032,14.329-4.866c1.887,2.166-8.667,11.364-6.779,13.53" stroke-width="2" fill="none" stroke="#0d47a1" />
+			                  </svg>
+			              </div>
+			              
+			              
+			              <div class="block1">
+			                  <svg width="200" height="200" style="background:#e3f2fd">
+			                      <path class="path6" d="M162.771,162.841c-69.414-66.75-69.414-66.75-56.957-18.392 c-12.457-48.358-12.457-48.358-47.441,36.493c34.984-84.851,34.984-84.851-0.109-59.853C93.357,96.091,93.357,96.091,8.898,87.247 c84.459,8.844,84.459,8.844,56.89-18.599c27.57,27.443,27.57,27.443,16.93-57.408c10.639,84.851,10.639,84.851,35.268,48.358 c-24.629,36.493-24.629,36.493,59.83-1.638c-84.459,38.131-84.459,38.131-35.093,48.486 C93.357,96.091,93.357,96.091,162.771,162.841z" stroke-width="2" fill="none" stroke="#0d47a1" />
+			                  </svg>
+			              </div>
+			              
+			              
+			              <div class="block1">
+			                  <svg width="200" height="200" style="background:#e3f2fd">
+			                      <path class="path7" d="M143,177
+			c-28,2-58-14-69-41c-14,8-17,28-11,43c-17-22-20-54-6-78c-10-5-22-1-31,5c-4,4-8,7-11,12c9-26,31-48,59-51c-5-17-26-23-43-21
+			c26-10,58-8,79,13c4-6,4-13,3-20c-1-3-2-6-3-9c-3-7-9-13-14-19c25,14,44,40,44,69c5-1,9-4,13-7c2-2,3-5,5-7c4-8,8-17,7-27
+			c8,28,0,60-23,79c14,10,34,5,46-6c-17,23-46,38-75,32C112,161,128,173,143,177L143,177z" stroke-width="2" fill="none" stroke="#0d47a1" />
+			                  </svg>
+			              </div>
+			              
+			              <div class="block1">
+			                  <svg width="200" height="200" style="background:#e3f2fd">
+			                      <path class="path8" d="M189.477,132.044
+			c-4.507,6.655-18.649,4.617-24.446,9.645c-5.998,5.202-6.043,19.446-13.025,22.828c-7.083,3.431-18.318-5.386-25.995-3.909
+			c-7.677,1.478-14.836,13.836-22.686,13.28c-7.739-0.548-13.068-13.757-20.569-16.36c-7.249-2.516-19.623,4.627-26.279,0.121
+			c-5.324-3.605-2.114-16.699-6.136-21.336c-4.161-4.798-17.543-3.525-20.249-9.111c-2.745-5.666,6.568-15.404,5.385-21.546
+			c-1.182-6.142-13.444-11.727-12.999-18.007c0.438-6.191,13.337-9.976,15.419-15.977c2.013-5.799-5.829-16.765-2.224-22.089
+			c2.884-4.259,15.139-0.112,18.849-3.33c3.839-3.329,1.51-16.021,5.979-18.185c4.533-2.196,13.073,7.512,17.987,6.567
+			c4.913-0.946,9.239-13.131,14.263-12.775c4.953,0.351,7.503,13,12.303,14.666c4.639,1.61,14.478-6.791,18.738-3.907
+			c3.408,2.307-1.49,13.891,1.084,16.859c2.663,3.071,14.803-0.101,16.535,3.474c1.757,3.626-8.268,11.209-7.512,15.139
+			c0.757,3.931,12.88,7.249,12.595,11.269c-0.281,3.962-12.731,5.524-14.063,9.364c-1.288,3.712,7.56,12.649,5.252,16.056
+			c-1.846,2.726-12.893-2.771-15.267-0.712c-2.457,2.131,1.39,13.829-1.47,15.215c-2.901,1.405-9.717-8.873-12.861-8.268
+			c-3.145,0.605-5.657,12.679-8.873,12.452c-3.17-0.224-3.941-12.515-7.013-13.581c-2.969-1.03-11.185,8.175-13.911,6.329
+			c-2.181-1.477,3.796-12.094,2.149-13.993c-1.704-1.965-13.05,2.421-14.158,0.133c-1.124-2.321,9.357-8.523,8.873-11.039
+			c-0.484-2.516-12.519-4.384-12.337-6.956c0.18-2.536,12.343-2.675,13.196-5.132c0.824-2.375-8.667-10.015-7.191-12.195
+			c1.181-1.745,11.455,4.616,12.975,3.298c1.572-1.364-3.246-12.427-1.416-13.313c1.857-0.899,7.568,9.744,9.581,9.356
+			c2.012-0.387,3.365-12.39,5.423-12.245c2.029,0.144,1.662,12.205,3.628,12.887c1.9,0.659,9.078-9.061,10.823-7.88
+			c1.396,0.945-5.272,10.944-4.218,12.16c1.091,1.258,11.928-3.906,12.637-2.442c0.719,1.485-10.053,6.805-9.744,8.415
+			c0.31,1.61,12.288,2.55,12.171,4.196c-0.115,1.623-12.095,0.851-12.64,2.424c-0.528,1.52,9.376,8.329,8.431,9.724
+			c-0.756,1.117-10.535-5.797-11.508-4.954c-1.006,0.873,4.434,11.529,3.263,12.096c-1.188,0.576-6.194-10.301-7.482-10.053
+			c-1.288,0.248-1.898,12.205-3.215,12.112c-1.298-0.092-0.203-12.006-1.461-12.443c-1.216-0.422-7.729,9.628-8.846,8.872
+			c-0.893-0.605,6.217-10.208,5.543-10.986c-0.698-0.805-11.21,4.857-11.664,3.919c-0.46-0.951,10.499-5.705,10.301-6.735
+			c-0.198-1.03-12.14-1.376-12.065-2.43c0.074-1.039,11.936,0.316,12.285-0.691c0.338-0.973-9.83-7.25-9.225-8.143" stroke-width="2" fill="none" stroke="#0d47a1" />
+			                  </svg>
+			              </div>
+
+
+						<style>
+							.leejaehun path {
+								animation: ani1 4s infinite linear; 
+								stroke-dasharray: 500px; stroke-dashoffset: 500px; 
+								stroke-width: 2px;
+								stroke: #0d47a1;
+								fill: none;
+							}
+							@keyframes ani1 {
+								0% {stroke-dashoffset: 550px;  }
+								100% {stroke-dashoffset: 0px;  }
+							}
+						</style>
+						</div>
+						<div class="well clearfix">
+							<div class="block">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										 width="1170px" height="600px" viewBox="0 0 1170 600" enable-background="new 0 0 1170 600" xml:space="preserve">
+									<g class="leejaehun">
+										<path d="M98.392,367.323H67.386V202.162h31.006V367.323z"/>
+										<path d="M182.864,370.131c-9.848,0-18.576-1.445-26.184-4.333c-7.61-2.889-14.019-7.02-19.226-12.391
+											c-5.209-5.371-9.197-11.921-11.963-19.653c-2.768-7.73-4.15-16.438-4.15-26.123c0-9.846,1.362-18.635,4.089-26.367
+											c2.726-7.73,6.653-14.282,11.78-19.653s11.372-9.46,18.738-12.268c7.364-2.808,15.766-4.211,25.208-4.211
+											c9.033,0,17.191,1.343,24.475,4.028c7.282,2.686,13.508,6.653,18.677,11.902c5.167,5.249,9.134,11.719,11.902,19.409
+											c2.766,7.69,4.15,16.46,4.15,26.306v7.446h-87.158c0.244,6.268,1.16,11.657,2.747,16.175c1.587,4.516,3.681,8.22,6.287,11.107
+											c2.604,2.89,5.655,5.026,9.155,6.409c3.498,1.385,7.324,2.075,11.475,2.075c6.428,0,11.881-1.383,16.357-4.15
+											c4.475-2.766,7.73-7.526,9.766-14.282h28.931c-1.141,6.186-3.277,11.679-6.409,16.479c-3.134,4.803-7.08,8.85-11.841,12.146
+											c-4.761,3.295-10.254,5.778-16.479,7.445C196.963,369.296,190.188,370.131,182.864,370.131z M208.987,295.302
+											c-1.221-10.416-4.253-18.188-9.094-23.315c-4.843-5.127-11.089-7.69-18.738-7.69c-7.568,0-13.775,2.563-18.616,7.69
+											c-4.843,5.127-7.874,12.899-9.094,23.315H208.987z"/>
+										<path d="M317.874,370.131c-9.848,0-18.576-1.445-26.184-4.333c-7.61-2.889-14.019-7.02-19.226-12.391
+											c-5.209-5.371-9.197-11.921-11.963-19.653c-2.768-7.73-4.15-16.438-4.15-26.123c0-9.846,1.362-18.635,4.089-26.367
+											c2.726-7.73,6.653-14.282,11.78-19.653s11.372-9.46,18.738-12.268c7.364-2.808,15.766-4.211,25.208-4.211
+											c9.033,0,17.191,1.343,24.475,4.028c7.282,2.686,13.508,6.653,18.677,11.902c5.167,5.249,9.134,11.719,11.902,19.409
+											c2.766,7.69,4.15,16.46,4.15,26.306v7.446h-87.158c0.244,6.268,1.16,11.657,2.747,16.175c1.587,4.516,3.681,8.22,6.287,11.107
+											c2.604,2.89,5.655,5.026,9.155,6.409c3.498,1.385,7.324,2.075,11.475,2.075c6.428,0,11.881-1.383,16.357-4.15
+											c4.475-2.766,7.73-7.526,9.766-14.282h28.931c-1.141,6.186-3.277,11.679-6.409,16.479c-3.134,4.803-7.08,8.85-11.841,12.146
+											c-4.761,3.295-10.254,5.778-16.479,7.445C331.973,369.296,325.198,370.131,317.874,370.131z M343.997,295.302
+											c-1.221-10.416-4.253-18.188-9.094-23.315c-4.843-5.127-11.089-7.69-18.738-7.69c-7.568,0-13.775,2.563-18.616,7.69
+											c-4.843,5.127-7.874,12.899-9.094,23.315H343.997z"/>
+										<path d="M429.08,370.863c0,7.813-0.631,14.526-1.892,20.142c-1.263,5.615-3.296,10.254-6.104,13.916s-6.552,6.348-11.23,8.057
+											c-4.681,1.709-10.437,2.563-17.273,2.563c-3.256,0-6.268-0.143-9.033-0.427c-2.766-0.286-5.329-0.672-7.69-1.16v-24.048
+											c1.873,0.65,3.765,1.078,5.676,1.282c1.911,0.202,3.803,0.305,5.676,0.305c2.033,0,3.723-0.305,5.066-0.916
+											c1.343-0.609,2.46-1.729,3.357-3.356c0.895-1.629,1.526-3.805,1.892-6.53c0.366-2.728,0.549-6.247,0.549-10.56V247.816h31.006
+											V370.863z M429.08,227.797h-31.006V201.43h31.006V227.797z"/>
+										<path d="M534.183,356.337c-5.291,4.639-11.272,8.099-17.944,10.376c-6.674,2.277-14.242,3.418-22.705,3.418
+											c-5.859,0-11.313-0.753-16.357-2.259c-5.047-1.505-9.42-3.723-13.123-6.652c-3.704-2.93-6.634-6.571-8.789-10.926
+											c-2.157-4.353-3.235-9.378-3.235-15.075c0-27.668,23.844-41.504,71.533-41.504h10.376c0-6.266-0.204-10.864-0.61-13.794
+											c-0.408-1.953-0.977-3.742-1.709-5.371c-0.732-1.627-1.791-3.052-3.174-4.272c-1.465-2.115-3.784-3.641-6.958-4.578
+											c-3.174-0.935-7-1.404-11.475-1.404c-8.057,0-14.141,1.486-18.25,4.456c-4.11,2.972-6.451,7.385-7.019,13.245h-27.832
+											c1.627-24.576,19.693-36.865,54.199-36.865c8.381,0,15.766,0.652,22.156,1.953c6.388,1.303,12.146,3.622,17.273,6.958
+											c4.801,3.094,8.381,7.446,10.742,13.062c2.359,5.615,3.54,13.266,3.54,22.949v77.271h-30.64V356.337z M533.938,312.27h-11.963
+											c-12.859,0-22.461,1.647-28.809,4.944c-6.348,3.295-9.521,8.688-9.521,16.174c0,5.615,1.911,9.786,5.737,12.512
+											c3.824,2.728,8.911,4.09,15.259,4.09c2.93,0,5.817-0.346,8.667-1.037c2.848-0.691,5.533-1.628,8.057-2.809
+											c2.521-1.179,4.862-2.644,7.019-4.395c2.155-1.749,4.007-3.681,5.554-5.798V312.27z"/>
+										<path d="M648.929,370.131c-9.848,0-18.575-1.445-26.184-4.333c-7.61-2.889-14.02-7.02-19.227-12.391
+											c-5.209-5.371-9.197-11.921-11.963-19.653c-2.768-7.73-4.15-16.438-4.15-26.123c0-9.846,1.362-18.635,4.09-26.367
+											c2.726-7.73,6.652-14.282,11.779-19.653s11.372-9.46,18.738-12.268c7.364-2.808,15.766-4.211,25.207-4.211
+											c9.033,0,17.191,1.343,24.475,4.028s13.509,6.653,18.678,11.902c5.167,5.249,9.134,11.719,11.901,19.409
+											c2.766,7.69,4.15,16.46,4.15,26.306v7.446h-87.158c0.244,6.268,1.159,11.657,2.747,16.175c1.586,4.516,3.681,8.22,6.286,11.107
+											c2.604,2.89,5.655,5.026,9.155,6.409c3.498,1.385,7.324,2.075,11.475,2.075c6.428,0,11.881-1.383,16.357-4.15
+											c4.475-2.766,7.73-7.526,9.766-14.282h28.931c-1.141,6.186-3.276,11.679-6.409,16.479c-3.133,4.803-7.08,8.85-11.84,12.146
+											c-4.762,3.295-10.254,5.778-16.48,7.445C663.028,369.296,656.253,370.131,648.929,370.131z M675.052,295.302
+											c-1.221-10.416-4.253-18.188-9.094-23.315c-4.843-5.127-11.09-7.69-18.738-7.69c-7.568,0-13.774,2.563-18.615,7.69
+											c-4.843,5.127-7.874,12.899-9.095,23.315H675.052z"/>
+										<path d="M760.379,238.295c0,4.07-0.062,8.179-0.183,12.329c-0.123,4.15-0.266,8.139-0.428,11.963
+											c10.822-11.637,23.071-17.456,36.743-17.456c27.262,0,40.894,14.69,40.894,44.067v78.125h-31.006V291.64
+											c0-8.219-1.404-14.16-4.211-17.822c-2.809-3.662-7.428-5.493-13.855-5.493c-4.721,0-9.42,1.404-14.1,4.211
+											s-9.298,6.897-13.854,12.268v82.52h-31.006V202.162h31.006V238.295z"/>
+										<path d="M943.973,352.064c-5.371,6.023-11.17,10.54-17.395,13.55c-6.227,3.01-12.757,4.517-19.593,4.517
+											c-27.182,0-40.771-14.729-40.771-44.189v-78.125h30.884V323.5c0,6.104,0.772,10.885,2.319,14.343
+											c1.545,3.46,3.986,5.799,7.324,7.02c3.254,1.221,7.282,1.465,12.085,0.732c8.625-0.65,16.764-5.737,24.414-15.259v-82.52h30.884
+											v119.507h-30.151V352.064z"/>
+										<path d="M1033.938,262.953c10.904-11.881,23.233-17.822,36.987-17.822c27.262,0,40.894,14.69,40.894,44.067v78.125h-31.006V291.64
+											c0-6.104-0.732-10.883-2.197-14.343c-1.465-3.458-3.866-5.798-7.202-7.019c-3.5-1.139-7.488-1.383-11.963-0.732
+											c-8.221,0.652-16.439,5.737-24.658,15.259v82.52h-31.006V247.816h30.151V262.953z"/>
+									</g>
+								</svg>
+							</div>
+						</div>
+						<br>
+						<p data-height="400" data-theme-id="0" data-slug-hash="jprzdX" data-default-tab="result" data-user="wognsl305" data-embed-version="2" data-pen-title="SVG - Text Animation" class="codepen">See the Pen <a href="https://codepen.io/wognsl305/pen/jprzdX/">SVG - Text Animation</a> by wognsl305 (<a href="https://codepen.io/wognsl305">@wognsl305</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+						<br>
+						<p data-height="400" data-theme-id="0" data-slug-hash="YjWLGE" data-default-tab="result" data-user="wognsl305" data-embed-version="2" data-pen-title="SVG - Text animation2" class="codepen">See the Pen <a href="https://codepen.io/wognsl305/pen/YjWLGE/">SVG - Text animation2</a> by wognsl305 (<a href="https://codepen.io/wognsl305">@wognsl305</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+						<br>
+						<p data-height="400" data-theme-id="0" data-slug-hash="jprKNW" data-default-tab="result" data-user="wognsl305" data-embed-version="2" data-pen-title="Parallax - SVG" class="codepen">See the Pen <a href="https://codepen.io/wognsl305/pen/jprKNW/">Parallax - SVG</a> by wognsl305 (<a href="https://codepen.io/wognsl305">@wognsl305</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+						<br>
+						<p data-height="400" data-theme-id="0" data-slug-hash="gjMKwV" data-default-tab="result" data-user="wognsl305" data-embed-version="2" data-pen-title="SVG - Loding" class="codepen">See the Pen <a href="https://codepen.io/wognsl305/pen/gjMKwV/">SVG - Loding</a> by wognsl305 (<a href="https://codepen.io/wognsl305">@wognsl305</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+						<br>
+						<p><p data-height="400" data-theme-id="0" data-slug-hash="ZjOjwd" data-default-tab="result" data-user="wognsl305" data-embed-version="2" data-pen-title="ZjOjwd" class="codepen">See the Pen <a href="https://codepen.io/wognsl305/pen/ZjOjwd/">ZjOjwd</a> by wognsl305 (<a href="https://codepen.io/wognsl305">@wognsl305</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>	
+						<br>
+						<p data-height="300" data-theme-id="0" data-slug-hash="vayppZ" data-default-tab="html,result" data-user="wognsl305" data-embed-version="2" data-pen-title="SVG Hover Animations" class="codepen">See the Pen <a href="https://codepen.io/wognsl305/pen/vayppZ/">SVG Hover Animations</a> by wognsl305 (<a href="https://codepen.io/wognsl305">@wognsl305</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+					</div>
+					<!--//span12-->
+				</div>
+				<!--//row-fluid-->
+			</div>
+			<!-- //contents -->
+			<!-- //footer -->
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="span12">
+							<h5>LEEHUN</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //footer -->
+			<!-- script -->
+			<script src="../assets/js/jquery-1.9.1.min.js"></script>
+			<script src="../assets/js/bootstrap-collapse.js"></script>
+			<script src="../assets/js/bootstrap-transition.js"></script>
+			<script src="../assets/js/google-code-prettify/prettify.js"></script>
+			<script src="../assets/js/application.js"></script>
+			<script>
+				var path = document.querySelector(".path1");
+				//var path = $(".path1");
+				var length = path.getTotalLength();
+				//alert(length);
+			</script>
+		</body>
+	</html>

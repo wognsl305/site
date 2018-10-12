@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //1. 변수를 사용해서 423*869값을 출력해주세요!
+        var x = 423;
+        var y = 869;
+        
+        document.write(x*y);
+        document.write("<br>");
+        
+        //1-1 함수를 사용해서 423*869 값을 출력해주세요!
+        function num1(){
+            document.write(x*y);
+            document.write("<br>");
+        }
+        num1();
+        
+        //2. 변수를 사용해서 "javascript" 문자열을 출력해주세요!
+        var num2 = document.write("javascript");
+            document.write("<br>");
+        
+        //3. 배열을 사용해서 "html, "css" 문자열을 출력해 주세요!
+        var arry = new Array("html","css");
+            document.write(arry[0]);
+            document.write("<br>");
+            document.write(arry[1]);
+            document.write("<br>");
+        
+        //3-1 var arr2 = new Array(1,2,3,4,5,6,7,); 배열의 크기를 구해주세요
+        var arr2 = new Array(1,2,3,4,5,6,7,);
+            document.write(arr2.length);
+            document.write("<br>");
+        
+        //4. for문을 사용해서 1~100까지 출력해주세요!
+        for(var i=0; i<=100; i++){
+            document.write(i);
+            document.write("<br>");
+        }
+        //5. 숫자 483463 홀수 짝수 판단해서 출력해주세요!
+        var num3 = 483463;
+        
+        if (num3 % 2 == 0 ){
+            document.write("짝수입니다.");
+            document.write("<br>");
+        } else {
+            document.write("홀수입니다.");
+            document.write("<br>");
+        }
+        //6. 50보다 작은 숫자에서 13의 배수를 출력해주세요!
+        for (var i=1; i<=50; i++){
+            if(i%13==0){
+                document.write(i);
+                document.write("<br>");
+            }
+        }
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

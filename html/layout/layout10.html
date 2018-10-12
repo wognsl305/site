@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		#wrap {}
+		#header {}
+		#contents {width: 100%; height: 1466px;	background:#ddd;}
+		#footer {width: 100%;	height: 314px;	background:#eee;}
+		.header-top {width: 100%; height: 130px; background:#222;}
+		.header-bom {width: 100%; height: 50px; background:#333;}
+		.footer1 {width: 100%; height: 100px; background:#777;}
+		.footer2 {width: 100%; height: 160px; background:#888;}
+		.footer3 {width: 100%; height: 54px; background:#999;}
+
+		.container {overflow:hidden; width: 1100px; height:inherit; margin: 0 auto; background:rgba(0,0,0,0.5);}
+		.contents .left {float:left; width: 740px; height: 1466px;}
+		.contents .right {float:left; width: 332px; height: 1466px;}
+		
+		.left .left1 {width: 100%; height: 119px;}
+		.left .left2 {width: 100%; height: 46px;}
+		.left .left3 {width: 100%; height: 246px;}
+		.left .left4 {width: 100%; height: 885px;}
+		.left .left5 {width: 100%; height: 219px;}
+	
+
+
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="header-top">
+				<div class="container">header-top</div>
+			</div>
+			<div class="header-bom">
+				<div class="container">header-bom</div>
+			</div>	
+		</div>
+		<div id="contents">
+			<div class="container">
+				<div class="contents">
+					<div class="left">
+						<div class="left1">left1</div>
+						<div class="left2">left2</div>
+						<div class="left3">left3</div>
+						<div class="left4">left4</div>
+						<div class="left5">left5</div>
+					</div>
+					<div class="right"></div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="footer1"><div class="container">footer1</div></div>
+			<div class="footer2"><div class="container">footer2</div></div>
+			<div class="footer3"><div class="container">footer3</div></div>
+		</div>
+	</div>
+</body>
+</html>
